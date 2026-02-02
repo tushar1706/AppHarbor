@@ -17,7 +17,7 @@ const DetailPanel = ({ container, stats, logs }) => {
   return (
     <div className="detail-panel">
       <div className="detail-header">
-        <h2>{formatContainerName(container.Names)}</h2>
+        <h2>{formatContainerName(container.name)}</h2>
         <div className="detail-tabs">
           <button className="tab active">
             <Activity size={16} />
