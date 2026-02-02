@@ -5,10 +5,10 @@ import { formatBytes, formatCPU } from '../../utils/formatters';
 const StatsGrid = ({ stats }) => {
   if (!stats) return null;
 
-  const cpuPercent = stats.cpu_stats?.cpu_usage?.cpu_percent || 0;
+  const cpuPercent = stats.cpu_percent || 0;
   const memUsage = stats.memory_stats?.usage || 0;
   const memLimit = stats.memory_stats?.limit || 0;
-  const memPercent = memLimit ? (memUsage / memLimit) * 100 : 0;
+  const memPercent = stats.mem_percent || 0;
 
   return (
     <div className="stats-grid">
