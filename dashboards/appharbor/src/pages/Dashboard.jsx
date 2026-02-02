@@ -15,8 +15,8 @@ const Dashboard = () => {
   const [refreshing, setRefreshing] = useState(false);
 
   const { containers, loading, refetch } = useContainers(showAll);
-  const { logs } = useContainerLogs(selectedContainer?.Id);
-  const { stats } = useContainerStats(selectedContainer?.Id);
+  const { logs } = useContainerLogs(selectedContainer?.id);
+  const { stats } = useContainerStats(selectedContainer?.id);
 
   const handleRefresh = async () => {
     setRefreshing(true);
@@ -37,7 +37,7 @@ const Dashboard = () => {
     if (!window.confirm('Are you sure you want to remove this container?')) return;
     try {
       await dockerApi.removeContainer(containerId, force);
-      if (selectedContainer?.Id === containerId) {
+      if (selectedContainer?.id === containerId) {
         setSelectedContainer(null);
       }
       setTimeout(refetch, 500);

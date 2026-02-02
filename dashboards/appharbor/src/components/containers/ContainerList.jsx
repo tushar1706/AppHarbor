@@ -20,9 +20,9 @@ const ContainerList = ({
     <div className="container-list">
       {containers.map((container) => (
         <ContainerCard
-          key={container.Id}
+          key={container.id}
           container={container}
-          isSelected={selectedContainer?.Id === container.Id}
+          isSelected={selectedContainer?.id === container.id}
           onClick={onSelectContainer}
           onStart={onStart}
           onStop={onStop}
