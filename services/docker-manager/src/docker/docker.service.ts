@@ -42,7 +42,7 @@ export class DockerService implements OnModuleInit {
     // }
 
     // this.logger.log(`Docker service initialized on ${platform}`);
-    const socketPath = '/home/tushar/.docker/desktop/docker.sock';
+    const socketPath = '/var/run/docker.sock';
     
     this.docker = new Docker({ socketPath });
     
