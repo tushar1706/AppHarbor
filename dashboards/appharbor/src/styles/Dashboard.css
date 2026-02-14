@@ -131,6 +131,8 @@
     grid-template-columns: 400px 1fr;
     gap: 2rem;
     min-height: calc(100vh - 5rem);
+    /* height: calc(100vh - 65px); */
+    overflow: auto
   }
   
   .container-list {
@@ -440,7 +442,7 @@
   /* Sidebar.css */
 .sidebar {
   width: 240px;
-  height: 100vh;
+  height: calc(100vh - 60px);
   background-color: #111111; /* slate-900 */
   color: #e5e7eb;
   display: flex;

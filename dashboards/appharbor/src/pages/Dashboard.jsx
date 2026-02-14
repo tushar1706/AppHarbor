@@ -68,7 +68,7 @@ const Dashboard = () => {
         onSelect={setActiveSection}
       />
 
-      <main style={{ padding: "20px", flex: 1 }}>
+      <main style={{ padding: "20px", flex: 1}}>
         <h2>{activeSection.toUpperCase()}</h2>
       <div className="main-content">
         <ContainerList
