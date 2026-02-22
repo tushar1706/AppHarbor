@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../components/layout/Header';
-import Sidebar from '../components/layout/Sidebar';
+// import Sidebar from '../components/layout/Sidebar';
 import ContainerList from '../components/containers/ContainerList';
 import DetailPanel from '../components/details/DetailPanel';
 import LoadingSpinner from '../components/common/LoadingSpinner';
@@ -18,7 +18,7 @@ const Dashboard = () => {
   const { containers, loading, refetch } = useContainers(showAll);
   const { logs } = useContainerLogs(selectedContainer?.id);
   const { stats } = useContainerStats(selectedContainer?.id);
-  const [activeSection, setActiveSection] = useState("containers");
+  // const [activeSection, setActiveSection] = useState("containers");
   const handleRefresh = async () => {
     setRefreshing(true);
     await refetch();
@@ -63,13 +63,13 @@ const Dashboard = () => {
         refreshing={refreshing}
       />
   <div style={{ display: "flex" }}>
-      <Sidebar
+      {/* <Sidebar
         active={activeSection}
         onSelect={setActiveSection}
-      />
+      /> */}
 
       <main style={{ padding: "20px", flex: 1}}>
-        <h2>{activeSection.toUpperCase()}</h2>
+        {/* <h2>{activeSection.toUpperCase()}</h2> */}
       <div className="main-content">
         <ContainerList
           containers={containers}

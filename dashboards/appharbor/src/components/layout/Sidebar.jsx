@@ -1,6 +1,6 @@
 // Sidebar.jsx
 import React from "react";
-
+import { NavLink } from "react-router-dom";
 const Sidebar = ({ active, onSelect }) => {
   const menuItems = [
     { id: "containers", label: "Containers", icon: "🐳" },
@@ -19,12 +19,17 @@ const Sidebar = ({ active, onSelect }) => {
       <ul className="sidebar-menu">
         {menuItems.map(item => (
           <li
-            key={item.id}
-            className={`sidebar-item ${active === item.id ? "active" : ""}`}
-            onClick={() => onSelect(item.id)}
+          key={item.id} className="sidebar-item"
           >
+            <NavLink
+              to={`/${item.id}`}
+              className={({ isActive }) =>
+                `sidebar-link ${isActive ? "active" : ""}`
+              }
+            >
             <span className="icon">{item.icon}</span>
             <span className="label">{item.label}</span>
+            </NavLink>
           </li>
         ))}
       </ul>

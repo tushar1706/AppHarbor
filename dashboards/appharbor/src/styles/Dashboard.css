@@ -491,9 +491,9 @@
 
   
   @media (max-width: 1024px) {
-    .main-content {
+    /* .main-content {
       grid-template-columns: 1fr;
-    }
+    } */
   
     .stats-grid {
       grid-template-columns: 1fr;
