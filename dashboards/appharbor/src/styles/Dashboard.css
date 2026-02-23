@@ -38,11 +38,22 @@
     font-weight: 300;
     letter-spacing: -0.02em;
   }
-  
-  .header-actions {
+  .action-btn-container{
+    display: flex;
+    justify-content: right;
+  }
+  .actions-btns {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    padding: 8px 4px;
+  }
+  .add-btn{
+    border: 1px solid blue;
+    border-radius: 4px;
+    background: transparent;
+    color: blue;
+    padding: 4px 8px;
   }
   
   .toggle {

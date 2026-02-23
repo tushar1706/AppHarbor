@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, RefreshCw } from 'lucide-react';
-
-const Header = ({ showAll, onToggleShowAll, onRefresh, refreshing }) => {
+import '../../styles/Dashboard.css';
+const Header = () => {
   return (
     <header className="header">
       <div className="header-content">
@@ -9,7 +9,7 @@ const Header = ({ showAll, onToggleShowAll, onRefresh, refreshing }) => {
           <Container size={28} strokeWidth={1.5} />
           <h1>App Harbor</h1>
         </div>
-        <div className="header-actions">
+        {/* <div className="header-actions">
           <label className="toggle">
             <input
               type="checkbox"
@@ -25,7 +25,7 @@ const Header = ({ showAll, onToggleShowAll, onRefresh, refreshing }) => {
           >
             <RefreshCw size={18} />
           </button>
-        </div>
+        </div> */}
       </div>
     </header>
   );

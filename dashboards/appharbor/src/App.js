@@ -7,13 +7,16 @@ import NetworksPage from './pages/NetworksPage';
 import SettingsPage from './pages/SettingsPage';
 import './App.css';
 import Sidebar from './components/layout/Sidebar'
-
+import Header from './components/layout/Header';
 function App() {
   return (
     <BrowserRouter>
+     <Header
+      />
       <div className="app-layout" style={{ display: "flex" }}>
+
         <Sidebar />
-        <main>
+        <main style={{width: "calc(100vw - 240px)"}}>
           <Routes>
             <Route path="/" element={<Navigate to="/containers" replace />} />
             <Route path="/containers" element={<Dashboard />} />
