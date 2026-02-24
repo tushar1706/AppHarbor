@@ -10,7 +10,7 @@ function CreateApp() {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:3000/apps', {
+      const res = await axios.post('http://localhost:3008/apps', {
         name,
         image,
         port: Number(port),
