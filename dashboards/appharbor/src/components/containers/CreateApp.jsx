@@ -16,7 +16,7 @@ function CreateApp() {
         port: Number(port),
       });
 
-      //alert('App created successfully!');
+      alert('App created successfully!');
       console.log(res.data);
     } catch (err) {
       console.error(err);
