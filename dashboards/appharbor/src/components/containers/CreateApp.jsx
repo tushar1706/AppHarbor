@@ -17,7 +17,7 @@ function CreateApp() {
       });
 
       alert('App created successfully!');
-      console.log(res.data);
+      // console.log(res.data);
     } catch (err) {
       console.error(err);
       alert('Error creating app');
